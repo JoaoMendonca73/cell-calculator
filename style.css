@@ -1,0 +1,207 @@
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  background-color: #a5a58d;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cntnr{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20PX;
+    background-image: linear-gradient(75deg, #d00000, lawngreen);
+  box-shadow: -10px 10px 20px 2px black;
+  position: relative;
+}
+
+.cll{
+  min-height: 99%;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: relative;
+}
+
+
+.sndUp-btn,
+.sndDwn-btn,
+.pwr-btn{
+  cursor:pointer; 
+}
+
+.sndUp-btn,
+.sndDwn-btn{
+  width: 3px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+}
+
+.sndUp-btn{
+  top:40px;
+  right: -6px;
+}
+
+.sndDwn-btn{
+  top: 82px;
+  right: -6px;
+}
+
+.pwr-btn{
+  width: 3px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 124px;
+  right: -6px;
+  border-radius: 0 5px 5px 0;
+}
+
+.sndUp-btn:active,
+.sndDwn-btn:active,
+.pwr-btn:active{
+  width:2px;
+  transform: translateX(-1px);
+}
+
+.hdr,
+input,
+.btn-cntnr{
+  visibility: hidden;
+}
+
+.hdr,
+input{
+  pointer-events: none;
+}
+
+
+.hdr,
+.hdr .cnct img{
+  background-color: black;
+  color: white;
+}
+
+.hdr{
+    width: 90%;
+  margin-top: 15px ;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+}
+
+.camSct{
+  width: 60%;
+  height: 15px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+  align-items: center;
+  background-color: rgb(10,10,10);
+  position: absolute;
+}
+
+.cam{
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, rgb(30,30,30), rgb(50,50,100));
+}
+
+input{
+  width: 90%;
+  padding: 0 .2em;
+  height: 3em;
+  font-size: 3em;
+  text-align: right ;
+  border: none;
+  border-radius: 0 0 10px 10px;
+background-color: black;
+  color: white;
+}
+
+.btn-cntnr{
+    width: 90%;
+    height: auto;
+    padding: 10px 0;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+}
+
+.btn-cntnr button{ 
+  padding:16px 0 ;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+
+}
+
+.btn-cntnr button:hover{
+  opacity: 0.8;
+  transform: scale(.9);
+  transition: .3s;
+}
+
+.btn-cntnr button:active{
+  opacity: .5;
+}
+
+#btn-eql{
+    grid-row: span 2;
+  background-color: lawngreen;
+}
+
+.micro{
+  width: 40%;
+  height: 5px;
+  margin: 3px auto;
+  background-color: rgb(50,50,50);
+}
+
+.nmbr{
+  background-color: white;
+}
+
+.oper,
+#btn-del{
+  background-color:#f48c06;
+}
+
+#btn-cancel{
+  background-color: red;
+}
